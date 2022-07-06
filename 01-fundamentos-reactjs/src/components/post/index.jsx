@@ -1,3 +1,4 @@
+import Comment from "../comment";
 import styles from "./Post.module.css";
 
 const Post = (props) => {
@@ -5,7 +6,11 @@ const Post = (props) => {
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <img className={styles.avatar} src="https://github.com/arthur-campolina.png" alt="Avatar" />
+          <img
+            className={styles.avatar}
+            src="https://github.com/arthur-campolina.png"
+            alt="Avatar"
+          />
           <div className={styles.authorInfo}>
             <strong>Arthur Campolina</strong>
             <span>Web Developer</span>
@@ -27,23 +32,25 @@ const Post = (props) => {
           👉 <a href="www">jane.design/doctorcare/</a>
         </p>
         <p>
-          <a href="www">#novoprojeto</a>{" "}
-          <a href="www">#nlw</a>{" "}
+          <a href="www">#novoprojeto</a> <a href="www">#nlw</a>{" "}
           <a href="www">#rocketseat</a>
         </p>
       </div>
 
       <form className={styles.commentForm}>
         <strong>Deixe seu feedback</strong>
-        <textarea 
-          placeholder="Deixe um comentário"
-        />
+        <textarea placeholder="Deixe um comentário" />
 
         <footer>
           <button type="submit">Publicar</button>
         </footer>
-
       </form>
+
+      <div className={styles.commentList}>
+        <Comment />
+        <Comment />
+        <Comment />
+      </div>
     </article>
   );
 };

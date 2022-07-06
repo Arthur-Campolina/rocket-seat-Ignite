@@ -57,8 +57,6 @@
     outline: 2px solid var(--green-500);
 }
 
-
-
 .authorInfo strong {
     display: block;
     color: var(--gray-100);
@@ -122,4 +120,8 @@
 
 .commentForm button[type=submit]:hover {
     background-color: var(--green-300);
+}
+
+.commentList {
+    margin-top: 2rem;
 }
