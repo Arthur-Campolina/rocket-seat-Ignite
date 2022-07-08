@@ -35,15 +35,13 @@ const Post = ({ author, content, publishedAt }) => {
 
       <div className={styles.content}>
         {content.map((line) => {
-          if (content.type === "paragraph") {
-            return <p>{line.content}</p>;
-          } else if (content.type === "link") {
-            return (
-              <p>
-                <a href="www">{line.link}</a>
-              </p>
-            );
-          }
+          return content.type === "paragraph" ? (
+            <p>{line.content}</p>
+          ) : (
+            <p>
+              <a href="www">{line.link}</a>
+            </p>
+          );
         })}
       </div>
 
